@@ -1,0 +1,95 @@
+.upload-dialog {
+    background: #fff;
+}
+
+.upload-dialog-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    margin-top: 90px;
+    margin-bottom: 70px;
+}
+
+.upload-dialog-file-drop-zone {
+    text-align: center;
+    min-height: 250px;
+    border: 5px #797979 dashed;
+    border-radius: 10px;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.upload-dialog-file-drop-zone:hover {
+    cursor: pointer;
+}
+
+.drop-zone-file-over {
+    background: #9fff9f;
+}
+
+.file-drop-zone-file-input {
+    opacity: 0.0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.align-in-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-drop-zone-upload-icon-container {
+    min-height: 150px;
+}
+
+.file-drop-zone-upload-icon {
+    transform: rotate(180deg);
+    color: orange;
+    font-size: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.file-drop-zone-info {
+    color: #797979;
+    .file-drop-zone-info-title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .file-drop-zone-info-sub {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .file-drop-zone-file-explorer {
+        color: orange;
+        border: none;
+        text-decoration: none;
+    }
+}
+
+.upload-dialog-close-button-container {
+    text-align: center;
+}
+
+.upload-dialog-close-button {
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .upload-dialog-title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .upload-dialog-file-drop-zone {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,121 @@
+<mat-toolbar class="main-toolbar">
+    <img src="assets/pics/folfy.png" alt="Siberian Husky" height="40px" width="40px">
+
+    <span class="example-fill-remaining-space"></span>
+
+    <button mat-button>
+        <span class="header-button">
+            Pricing
+        </span>
+    </button>
+    <div class="d-none d-sm-block">
+        <button mat-button (click)="openUploadDialog()">
+            <span class="header-button">
+                Upload
+            </span>
+        </button>
+    </div>
+    <div class="d-sm-none">
+        <button mat-icon-button style="font-weight: 500;" (click)="openUploadDialog()">
+            <mat-icon aria-label="Upload" class="upload-icon">get_app</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+
+<!-- MAIN BOODY -->
+
+<div class="main-body">
+    <div class="row align-items-center main-title-group">
+        <div class="col-12 col-sm-6 main-image">
+            <img src="https://cdn.dribbble.com/users/413551/screenshots/3953880/123.png" alt="Skater" width="100%">
+        </div>
+        <div class="col-12 col-sm-6 main-title">
+            <span>Share as you go</span>
+        </div>
+    </div>
+
+    <div class="row main-email">
+
+        <div class="col-12 align-in-middle">
+            <div class="row main-form-width">
+                <div class="col-12 email-input-label">
+                    <span>Email address</span>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-12">
+                    <mat-form-field class="email-box-form" appearance="outline">
+                        <input matInput placeholder="Your email" [formControl]="emailFormControl">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is
+                            <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100"></div>
+
+        <div class="col-12 align-in-middle">
+            <div class="row main-form-width">
+                <div class="col-12 price-select-label">
+                    <span>Choose the price</span>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-12 align-in-middle">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <div [ngClass]="(selectedPlan.value=='monthly')?'price-cube-selected':'price-cube'" (click)="changePlan('monthly')">
+                                <span class="price-cube-dot">&middot;</span>
+                                <div>
+                                    <sup class="price-symbol">€</sup>
+                                    <span class="price">120</span>
+                                </div>
+                                <div>
+                                    <span class="price-period">monthly</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div [ngClass]="(selectedPlan.value=='weekly')?'price-cube-selected':'price-cube'" (click)="changePlan('weekly')">
+                                <span class="price-cube-dot">&middot;</span>
+                                <div>
+                                    <sup class="price-symbol">€</sup>
+                                    <span class="price">40</span>
+                                </div>
+                                <div>
+                                    <span class="price-period">weekly</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100"></div>
+
+        <div class="col-12 align-in-middle">
+            <div class="row main-form-width main-send-button-container">
+                <div class="col-12 align-in-middle remove-padding">
+                    <div class="main-send-button">
+                        <button mat-raised-button color="primary" class="send-button">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MAIN BODY END -->
+
+<div class="main-footer">
+    <span>Wolfpack</span>
+</div>
