@@ -1,4 +1,4 @@
-Github page - https://vieshanis.github.io/twino/
+Github page - (https://vieshanis.github.io/app/twino/)
 
 # Homework task
 
