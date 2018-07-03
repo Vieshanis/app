@@ -90,6 +90,7 @@
 }
 
 .price-cube {
+    position: relative;
     background: #f2f2f2;
     color: #212121;
     height: 122px;
@@ -104,6 +105,7 @@
 }
 
 .price-cube-selected {
+    position: relative;
     background: #f4511e;
     color: white;
     height: 122px;
@@ -119,7 +121,7 @@
 
 .price-cube-dot {
     top: -62px;
-    left: 19px;
+    left: 5px;
     font-size: 90px;
     position: absolute;
 }
