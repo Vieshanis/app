@@ -120,7 +120,7 @@
 }
 
 .price-cube-dot {
-    top: -50px;
+    top: -62px;
     left: 5px;
     font-size: 90px;
     position: absolute;
@@ -165,5 +165,8 @@
         .send-button {
             min-width: 100%;
         }
+    }
+    .price-cube-dot {
+        top: -50px;
     }
 }
